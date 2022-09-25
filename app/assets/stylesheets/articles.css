@@ -21,3 +21,38 @@
     padding: 16px;
     width: 600px;
 }
+
+.articles {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    width: 600px;
+    margin: 16px;
+}
+
+.article {
+    min-width: 150px;
+    height: 150px;
+    background-color: rgb(86, 159, 148);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 8px;
+    transition-duration: 0.2s;
+    padding: 16px;
+    box-sizing: border-box;
+}
+
+.article:hover {
+    transform: scale(1.03);
+}
+
+.article > p {
+    font-size: 0.8em;
+    color: rgb(240, 240, 240);
+}
+
+.new-article-btn:hover {
+    text-shadow: 1px 1px 5px rgb(240, 240, 240);
+}
