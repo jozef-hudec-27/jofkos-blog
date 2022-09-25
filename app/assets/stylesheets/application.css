@@ -13,3 +13,6 @@
  *= require_tree .
  *= require_self
  */
+:root {
+    font-family: sans-serif;
+}
