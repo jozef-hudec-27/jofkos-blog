@@ -23,6 +23,12 @@ body {
     height: 100vh;
 }
 
+::selection {
+    background: rgb(240, 240, 240);
+    color: rgb(50, 50, 50);
+
+}
+
 a {
     text-decoration: none;
     color: rgb(250, 250, 250);

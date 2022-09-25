@@ -1,20 +1,32 @@
-<h1><%= @article.title %></h1>
+<div style="display: flex; flex-direction: column; gap: 32px; align-items: center; padding-top: 16px; height: 100%;">
+    <div class="back-btn-container"><%= link_to "<< Back", root_url %></div>
 
-<p><%= @article.body %></p>
+    <div style="padding: 16px;">
+        <h1><%= @article.title %></h1>
+        <p><%= @article.body %></p>
+    </div>
 
-<ul>
-    <li><%= link_to "Edit", edit_article_path(@article) %></li>
-    <li><%= link_to "Destroy", article_path(@article), data: {
-                    turbo_method: :delete,
-                    turbo_confirm: "Are you sure?"
-                  } %></li>
-</ul>
+    <ul style="display: flex; gap: 48px;">
+        <li class="edit-article-btn"><%= link_to "Edit article", edit_article_path(@article) %></li>
+        <li class="delete-article-btn"><%= link_to "Delete article", article_path(@article), data: {
+            turbo_method: :delete,
+                        turbo_confirm: "Are you sure?"
+                    } %></li>
+    </ul>
+    
+    <div class="form-wrapper" style="margin-top: auto;">
+        <h2>Add a comment:</h2><br/>
+        <%= render 'comments/form' %>
+    </div>
 
-<h2>Comments</h2>
-<%# render @article.comments %>
-<%= render partial: "comments/comment", collection: @article.comments %>
+    <div class="comments-container">
+        <h2>Comments</h2><br/>
 
-<h2>Add a comment:</h2>
-<%= render 'comments/form' %>
+        <% if @article.comments.count == 0 %>
+            <p>Be the first one to comment!</p>
+        <% end %>
 
-<%= link_to "<< Back", root_url %>
+        <%# render @article.comments %>
+        <%= render partial: "comments/comment", collection: @article.comments %>
+    </div>
+</div>
