@@ -1,3 +1,12 @@
-<h1>Edit Article</h1>
+<div class="outer">
+    <div class="container">
+        <h1>Edit Article</h1>
 
-<%= render "form", article: @article %>
+        <div class="form-wrapper">
+            <%= render "form", article: @article %>
+        </div>
+
+        <%= link_to "<< Back", @article %>
+    </div>
+</div>
+
