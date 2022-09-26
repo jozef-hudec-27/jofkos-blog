@@ -80,3 +80,9 @@
     top: 12px;
     left: 12px;
 }
+
+.err-msg-wrapper {
+    color: red;
+    font-weight: 600;
+    font-size: 0.8em;
+}

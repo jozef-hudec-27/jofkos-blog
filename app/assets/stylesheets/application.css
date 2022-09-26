@@ -59,6 +59,11 @@ input[type='text'], textarea {
     padding: 4px 8px;
 }
 
+input[type='text']::selection, textarea::selection {
+    background: var(--dark-color);
+    color: var(--white-darker);
+}
+
 input[type='text']:hover, textarea:hover {
     background-color: var(--white-darker);
 }
