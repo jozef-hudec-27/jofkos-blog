@@ -21,6 +21,8 @@
 
 body {
     height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 ::selection {
@@ -74,4 +76,14 @@ input[type='submit'] {
 input[type='submit']:hover {
     background-color: rgb(26,109,98);
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+footer {
+    margin-top: auto;
+    background-color: rgb(240, 240, 240);
+    padding: 12px;
+    color: rgb(50, 50, 50);
+    display: flex;
+    justify-content: center;
+    box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.2);
 }
